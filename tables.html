@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2><img src="logo.png" alt="Weather App Logo" class="logo"> Weather App</h2>
+            <nav>
+                <ul>
+                    <li><a href="html.html">Dashboard</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                </ul>
+            </nav>
+
+            <div class="chatbot">
+                <h3>Chatbot</h3>
+                <textarea id="chatInput" placeholder="Ask me anything..." rows="4"></textarea>
+                <button id="sendChatBtn">Send</button>
+                <div id="chatResponse"></div>
+            </div>
+        </div>
+            <div class="forecast-table">
+                <h2>5-Day Forecast</h2>
+                <table id="forecastTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Weather</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

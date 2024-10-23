@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2><img src="logo.png" alt="Weather App Logo" class="logo"> Weather App</h2>
+            <nav>
+                <ul>
+                    <li><a href="#weatherwidget">Dashboard</a></li>
+                    <li><a href="#Tables">Tables</a></li>
+                </ul>
+            </nav>
+
+            <div class="chatbot">
+                <h3>Chatbot</h3>
+                <textarea id="chatInput" placeholder="Ask me anything..." rows="4"></textarea>
+                <button id="sendChatBtn">Send</button>
+                <div id="chatResponse"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div>
+                    <input type="text" id="searchBar" placeholder="Search city...">
+                    <button id="getWeatherBtn">Get Weather</button>
+                </div>
+                <div><img src="user-profile.png" alt="user-profile" class="user-profile"></div>
+            </div>
+
+            <div class="weather-display" id="weatherWidget">
+                <h2>Weather Data Based on City</h2>
+                <p>City: <span id="cityName"></span></p>
+                <p>Temperature: <span id="temperature"></span>°C</p>
+                <p>Weather: <span id="weatherDescription"></span></p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind Speed: <span id="windSpeed"></span> m/s</p>
+            </div>
+
+            <div class="charts">
+                <div class="chart">
+                    <h2>Vertical Bar Chart</h2>
+                    <canvas id="barChartCanvas"></canvas>
+                </div>
+                <div class="chart">
+                    <h2>Doughnut Chart</h2>
+                    <canvas id="doughnutChartCanvas"></canvas>
+                </div>
+                <div class="chart">
+                    <h2>Line Chart</h2>
+                    <canvas id="lineChartCanvas"></canvas>
+                </div>
+            </div>
+
+            <div class="forecast-table" id="Tables">
+                <h2>5-Day Forecast</h2>
+                <table id="forecastTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Weather</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
